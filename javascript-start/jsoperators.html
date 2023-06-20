@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+
+    let userName = prompt("Login");
+
+    if(userName ==="Admin"){
+      let passCode = prompt("Password");
+      
+      if(passCode === "TheMaster") { 
+        alert (`Welcome ${userName}!`);
+      }
+      else if(passCode === '' || passCode === null){
+        alert("Cancelled Login");
+      }
+      else{
+        alert("You are wrong!");
+      }
+    }
+
+    else if(userName === "" || userName === null){
+      alert("Cancelled Login");
+    }
+    else{
+      alert("I don't know you!");
+    }
+
+  </script>
+</body>
+</html>

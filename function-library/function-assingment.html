@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let askNumber = prompt("Give me an number");
+
+        function add7(number){
+            return parseFloat(askNumber) + 7;
+        } 
+
+        alert("Your number is " + add7());
+
+        function multiply(number1, number2){
+            return parseFloat(askNumber) * parseFloat(askNumber);
+        }
+
+        alert("Your multiplied number is " + multiply());
+
+        let askWord = prompt("Give me a word");
+
+        function capitalize(string){
+            let smallCase = askWord.toLowerCase();
+            let granCase = smallCase.charAt(0).toUpperCase() + smallCase.slice(1);
+            return granCase;
+        }
+        alert("Your word is " + capitalize(askWord));
+
+        function lastLetter(string){
+            let charIndex = askWord.length;
+            let lastChar = askWord.charAt(charIndex - 1);
+            return lastChar;
+            
+        }
+
+        alert("The last letter is " + lastLetter());
+
+    </script>
+</body>
+</html>
