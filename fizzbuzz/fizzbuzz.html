@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<!--This is fizzbuzz, the problem statement:
+Write a program that takes a user’s input and prints the numbers from one to the number the user entered. 
+However, for multiples of three print Fizz instead of the number and for the multiples of five print Buzz. 
+For numbers which are multiples of both three and five print FizzBuzz-->
+
+<body>
+    <script>
+        // First, I'll declare a variable with the input of the user as value
+        let theNumber = parseInt(prompt("Give me a number, any number"));
+        
+        //pretty straightforward, the "for" statement declares the variable "increment"
+        //and creates loop that repeats until the condition in the second part is met.
+        //if the condition is not met, then the variable "increment" is... incremented by 1
+        //which is the value of "increment", this works with 2, 3, etc.
+        //The if statement checks via modulo if the value of "increment" is exactly divisible
+        //by three, if this condition is met, the console logs "Fizz" instead of the number.
+        for (let increment = 1; increment <= theNumber; increment++){
+            if(increment % 3 === 0 && increment % 5 ===0) {
+                console.log("FizzBuzz");
+            }
+            
+            else if(increment % 3 === 0){
+                console.log("Fizz");
+            }
+
+            else if(increment % 5 ===0){
+                    console.log("Buzz");
+            }
+                    
+            else{
+                    console.log(increment);
+            }
+            
+        }
+
+    </script>
+</body>
+</html>
